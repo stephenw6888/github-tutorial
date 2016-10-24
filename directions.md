@@ -2,7 +2,7 @@
 
 ## _Overview_  
 
-* Using markdown syntax, display all of your knowledge about **Git** and **Github** in a single README file.  
+* Using markdown syntax, display all of your knowledge about **Git** and **Github** in a single README file.   
 
 ## _Directions_
 
