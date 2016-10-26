@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>GitHub-Tutorial 101 by stephenw6888</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>GitHub-Tutorial 101</h1>
+        <h2>Coding Choose You!</h2>
+        <a href="https://github.com/stephenw6888/github-tutorial" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="github-tutorial" class="anchor" href="#github-tutorial" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>GitHub Tutorial</h1>
+
+<p><em>by Stephen Wang</em></p>
+
+<hr>
+
+<h2>
+<a id="git-vs-github" class="anchor" href="#git-vs-github" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Git vs. GitHub</h2>
+
+<p><strong>Git and Github</strong> is two very <strong>different system</strong> throughout coding. </p>
+
+<blockquote>
+<p><strong>Git</strong> is it own independent variable as it's a version control. Means that it keep "snapshot" of the code you made incase you want to revert back to the original code. This doesn't require Github and it runs on the command line. You have a basic workflow throughout this by:</p>
+</blockquote>
+
+<ul>
+<li>Making Directory then "cd" into the directory.</li>
+<li>You can initialized the directory into the respository.</li>
+<li>You can edit the files(Save along the way).</li>
+<li>You can add files.</li>
+<li>You can commit them.</li>
+</ul>
+
+<blockquote>
+<p><strong>Github</strong> is an dependent variable as it's store codes within the cloud. This can be visually track and is easily collaboration with files. But, the catch is that Github is dependent on Git.</p>
+</blockquote>
+
+<p>Github.com &lt;-- Website (cloud)  </p>
+
+<blockquote>
+<p>The computer is the local machine (cloud9). It can be run within the command line and you can us the browser (Github.com) to interact with other respository. This can be visually be seen with multiple changes between commits from others. You have a basic workflow between: </p>
+</blockquote>
+
+<ul>
+<li>Intial respository (No existing project on Github)</li>
+<li>OR start from someone else's repository
+In other word, forking (Social Coding) and cloning (Copy of the repository). Remember to use push and pull</li>
+</ul>
+
+<hr>
+
+<h2>
+<a id="initial-setup" class="anchor" href="#initial-setup" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Initial Setup</h2>
+
+<p>Making a Github accounts is essential for loading up cloud save data incase of grave errors or if you want to load up the file from another computer. The essential for Github can also be use to check other people repository and you can fork and clone it. To make a Github account, you:</p>
+
+<ol>
+<li>Go on your web browser, (then incognito).</li>
+<li>Type in github.com.</li>
+<li>Top right click on signup.</li>
+<li>It is best to put in your hstat.org username example:
+Steven2789</li>
+<li>Password can be based on your own, but must be remember.</li>
+<li>Ignore the red bubble when it pop up and click on free account.</li>
+<li>You click on finish sign up and your done.</li>
+</ol>
+
+<hr>
+
+<blockquote>
+<p>In order to create a SSH key for Github and C9, follow these step:</p>
+</blockquote>
+
+<ol>
+<li>Github.com then top right of profile icon, then setting.</li>
+<li>Go to the left bar and click on SSH and GPG keys</li>
+<li>Click on "New SSH key"</li>
+<li>Then head over to c9 tab and top right iis gear-icon.</li>
+<li>Click. on SSh key tabs then copy/paste the SSH key into your Github (Begin with ssh-rsa).</li>
+<li>Then add the keyGo over to C9 and open up the IDE.</li>
+</ol>
+
+<hr>
+
+<h2>
+<a id="repository-setup" class="anchor" href="#repository-setup" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Repository Setup</h2>
+
+<p>There are code withing Github that are use to create alot of essential data. Those type of codes are use for setting up a repository espicially if you want to forward the save directly into the public cloud data. These code are:</p>
+
+<ul>
+<li><strong>'init'</strong></li>
+<li><strong>'add'</strong></li>
+<li><strong>'commit -m "message'</strong></li>
+<li><strong>'push'</strong></li>
+<li><strong>'git remote add origin'</strong></li>
+</ul>
+
+<p>You add git before these each code and the order to have the repository updated is <strong>'git add'</strong>, <strong>'git commit -m "message"'</strong>, and <strong>'git push'</strong>.</p>
+
+<blockquote>
+<p>To set up a repository, you would have to follow these steps:</p>
+</blockquote>
+
+<ol>
+<li>launch Github.com</li>
+<li>Then sign up or sign into account (Top right).</li>
+<li>Click on the plus sign top right.</li>
+<li>Click on "New Repository."</li>
+<li>If you have a directory that is intialized, you need to type the exact name from that directory you want to create into a repository. Copy the exact name into "Repository Name."</li>
+<li>Ignore description and have repository set on public.</li>
+<li>Once you create the repository, you go to code in the bar.</li>
+<li>Then you want to go toward SSH keys as using HTTPS require you to type your user/password in.</li>
+<li>Go down and look for "…or push an existing repository from the command line."</li>
+<li>Copy the <strong>'git remote add origin'</strong> then the link from the repository you have created.</li>
+<li>You finally have created a repository. If you want to copy someone else repository, here are the steps below.</li>
+</ol>
+
+<hr>
+
+<blockquote>
+<p>To copy/clone someone else repository, you would have to follow these steps:</p>
+</blockquote>
+
+<ol>
+<li>Require the link from that person to access the file their public file.</li>
+<li>By Typing in <em>"name/name of file."</em>
+</li>
+<li>Then access their public repository.</li>
+<li>Next on the top right, you click on fork (Allow you to grab their file).</li>
+<li>Next, you click on <em>"clone or download."</em>
+</li>
+<li>Click on SSH keys and copy the link.</li>
+<li>Go to your workspace then type in <strong>'git clone link'</strong>.</li>
+<li>Finally you <strong>'cd'</strong> into the files. </li>
+</ol>
+
+<blockquote>
+<p>If you want to make changes or add your code:</p>
+</blockquote>
+
+<ol>
+<li>You can change or add code.</li>
+<li>Then you can <em>"New Pull Request"</em> (Explained in ongoing workflow &amp; commands).</li>
+</ol>
+
+<hr>
+
+<h2>
+<a id="workflow--commands" class="anchor" href="#workflow--commands" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Workflow &amp; Commands</h2>
+
+<blockquote>
+<p>There are many essential code that allow your time with Github to be easier. The four codes that is used in Github which is essential is:</p>
+</blockquote>
+
+<ul>
+<li><strong>'git status'</strong></li>
+<li><strong>'git add'</strong></li>
+<li><strong>'git commit -m "message"'</strong></li>
+<li><strong>'git push'</strong></li>
+<li><strong>'git init'</strong></li>
+<li><strong>'git clone'</strong></li>
+<li><strong>'cd'</strong></li>
+</ul>
+
+<blockquote>
+<p>Throughout all these codes are helpful in your time in Github. The following example will be explain below:</p>
+</blockquote>
+
+<ul>
+<li><p><strong>'git status'</strong> = It is one of the most important code you need to remember. git status analyzes the files that you have change within the directory. This would print out the result in the command line, stating what need to be fix, what is not done, or if its correct.</p></li>
+<li><p><strong>'git add'</strong> = This add the current files entirely into Github, but if there are red files when you type "git status". This mean that the files have not been added into the Github. After add, you can commit the files and then push it into the repository. </p></li>
+<li><p><strong>'git commit -m "message"'</strong> = The files is commit into the Github, allowing to be push into the repository cloud. Before you do the commit, you need to add the files. Another way for this to mean "taking a screenshot" or snapshot.</p></li>
+<li><p><strong>'git push'</strong> = Pushing the files helps in loading it up into the cloud9 cloud file. It's important to begin with add then commit then do push in order to have the current files into the repository. Essentially, it is a command that is commited from the local files into the cloud files.</p></li>
+<li><p><strong>'git init'</strong> = This intialized the files within the directory. This is important as it intialize it and turn it into a master directory. Warning, don't ever intialized the workspace and if you do, the way to remove it is:</p></li>
+<li><p><strong>'rm -rf .git'</strong> = It forcefully remove the master within the workspace when you type this in the command line.</p></li>
+<li><p><strong>'git clone'</strong> = Cloning a file is a social connection between coding upon two people. But you can also Fork the directory and clone it in the process. Also to get the link, you click :</p></li>
+<li><p><strong>"clone or download"</strong> </p></li>
+</ul>
+
+<blockquote>
+<p>Then you copy the SSH link, not the HTTP link . You can copy that person directory by clicking on:</p>
+</blockquote>
+
+<ul>
+<li><strong>"New Pull Request"</strong></li>
+</ul>
+
+<blockquote>
+<p>In other word, you are submitting the changes made from your repository to the person with permission to replace it.</p>
+</blockquote>
+
+<ul>
+<li>
+<strong>'cd'</strong> = This allow you to enter into the directory you have made by entering the code. This is important if you want to make changes within the directory.</li>
+</ul>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/stephenw6888/github-tutorial/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/stephenw6888/github-tutorial/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/stephenw6888/github-tutorial"></a> is maintained by <a href="https://github.com/stephenw6888">stephenw6888</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
